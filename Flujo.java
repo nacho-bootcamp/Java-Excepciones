@@ -14,23 +14,25 @@ public class Flujo {
 
   public static void metodo2() {
     System.out.println("Ini do metodo2");
-    for (int i = 1; i <= 5; i++) {
-      System.out.println("i");
-      try {
-        int num = 0;
-        int resultado = i / num;
-      } catch (NullPointerException exepcion) {
-        System.out.println("Atrapo nullPointer");
-        System.out.println(exepcion.getMessage());
-        exepcion.printStackTrace();
-      } catch (ArithmeticException exepcion) {
-        System.out.println("Atrapo Arithmetic");
-        System.out.println(exepcion.getMessage());
-        exepcion.printStackTrace();
-      }
-      // cath(NullPointerException |ArithmeticException exeption)
-      // esa es otra manera
-    }
-    System.out.println("Fim do metodo2");
+
+    throw new ArithmeticException(); // esto permite que explote la bomba , se lanza el error
+    // for (int i = 1; i <= 5; i++) {
+    // System.out.println("i");
+    // try { // intenta esto
+    // int num = 0;
+    // int resultado = i / num;
+    // } catch (NullPointerException exepcion) { // atrapa el error
+    // System.out.println("Atrapo nullPointer");
+    // System.out.println(exepcion.getMessage());
+    // exepcion.printStackTrace();
+    // } catch (ArithmeticException exepcion) {
+    // System.out.println("Atrapo Arithmetic");
+    // System.out.println(exepcion.getMessage());
+    // exepcion.printStackTrace();
+    // }
+    // // cath(NullPointerException |ArithmeticException exeption)
+    // // esa es otra manera
+    // }
+    // System.out.println("Fim do metodo2");
   }
 }
