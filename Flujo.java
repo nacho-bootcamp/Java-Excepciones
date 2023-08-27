@@ -14,8 +14,9 @@ public class Flujo {
 
   public static void metodo2() {
     System.out.println("Ini do metodo2");
-
-    throw new ArithmeticException(); // esto permite que explote la bomba , se lanza el error
+    throw new MiException("Mi excepcion fue lanzada");
+    // throw new ArithmeticException(); // esto permite que explote la bomba , se
+    // lanza el error
     // for (int i = 1; i <= 5; i++) {
     // System.out.println("i");
     // try { // intenta esto
